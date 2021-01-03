@@ -223,6 +223,10 @@ export default {
     },
     handleExport(param) {
       // console.log(param)
+      if (param.eDoc === '') {
+        this.$message.error('该学生没有提交实验报告')
+        return;
+      }
       window.location.href = "http://localhost:9999/oems/file/download?eDoc=" + param.eDoc
     },
     editScore(param) {
