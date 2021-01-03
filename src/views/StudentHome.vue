@@ -52,6 +52,9 @@
                 prop="degree"
                 label="实验难度"
                 width="100">
+              <template slot-scope="scope">
+                {{scope.row.degree === 1 ? '简单': scope.row.degree === 2 ? '中等' : '困难'}}
+              </template>
             </el-table-column>
             <el-table-column
                 prop="deadline"
